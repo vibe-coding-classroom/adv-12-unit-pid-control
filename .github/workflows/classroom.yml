@@ -7,27 +7,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
-    name: Autograding
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - name: Install dependencies
-        run: npm install
-      - name: Run tests
-        run: npm test
-      - name: Autograding Reporter
-        uses: classroom-resources/autograding-grading-reporter@v1
-        env:
-          TESTS_RESULTS: ${{ steps.autograding.outputs.result }}
-        with:
-          runners: logic-verification
-  
   autograding:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -40,3 +20,9 @@ jobs:
           command: npm test
           timeout: 10
           max-score: 100
+      - name: Autograding Reporter
+        uses: classroom-resources/autograding-grading-reporter@v1
+        env:
+          LOGIC-VERIFICATION_RESULTS: "${{steps.logic-verification.outputs.result}}"
+        with:
+          runners: logic-verification
