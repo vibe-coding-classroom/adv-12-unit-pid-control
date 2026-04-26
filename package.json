@@ -1,0 +1,13 @@
+{
+  "name": "adv-12-unit-pid-control",
+  "version": "1.0.0",
+  "description": "PID Control Principles Assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "^1.0.0"
+  },
+  "type": "module"
+}
