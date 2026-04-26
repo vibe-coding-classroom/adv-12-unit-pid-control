@@ -1,5 +1,3 @@
-Viewed adv-12-unit-pid-control.html:1-374
-
 針對 **`adv-12-unit-pid-control` (PID 控制原理)** 單元，這是控制工程中最具代表性的課程。它帶領學員從「瞎子走路 (Open-Loop)」進化到「有感反饋 (Closed-Loop)」，並讓他們親身體會 **比例控制 (P)** 的強大與其固有的物理侷限（靜態誤差）。
 
 以下是在 **GitHub Classroom** 部署其作業 (Assignments) 的具體建議：
